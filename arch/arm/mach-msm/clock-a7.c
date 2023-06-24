@@ -241,17 +241,12 @@ static void get_speed_bin(struct platform_device *pdev, int *bin, int *version)
 	*version = (pte_efuse >> 4) & 0x3;
 
 	if (redundant_sel == 1)
-		*bin = (pte_efuse >> 27) & 0x7;
+ 		*bin = (pte_efuse >> 27) & 0x7;
 
-	if (!valid) {
-		dev_info(&pdev->dev, "Speed bin not set. Defaulting to 0!\n");
-		*bin = 0;
-	} else {
-#ifdef CONFIG_MSM8228_USE_ACPU_FREQ_TBL_1P6
-        *bin = 1;
-#endif
-		dev_info(&pdev->dev, "Speed bin: %d\n", *bin);
-	}
+        dev_info(&pdev->dev, "Speed bin being set to 1\n");
+		*bin = 1; // Force BIN 1
+
+        dev_info(&pdev->dev, "Speed bin: %d\n", *bin);
 
 	dev_info(&pdev->dev, "PVS version: %d\n", *version);
 
