@@ -1316,7 +1316,7 @@ static int sm5502_detach_dev(struct sm5502_usbsw *usbsw)
 			else
 				pdata->callback(CABLE_TYPE_UARTOFF, SM5502_DETACHED);
 			uart_sm5502_connecting = 0;
-#if (defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_CHN_CMCC_3G) || defined(CONFIG_MACH_MS01_CHN_CU_3G))
+#if (defined(CONFIG_MACH_MS01_EUR_3G)|| defined(CONFIG_MACH_MS01_EUR_LTE) || defined(CONFIG_MACH_MS01_KOR_LTE) || defined(CONFIG_MACH_MS01_CHN_CMCC_3G) || defined(CONFIG_MACH_MS01_CHN_CU_3G))
 			flash_control(false);
 #endif
 		}
@@ -1369,7 +1369,7 @@ static int sm5502_detach_dev(struct sm5502_usbsw *usbsw)
 			pdata->callback(CABLE_TYPE_USB, SM5502_DETACHED);
 		else
 			pdata->callback(CABLE_TYPE_JIG, SM5502_DETACHED);
-#if (defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_CHN_CMCC_3G) || defined(CONFIG_MACH_MS01_CHN_CU_3G))
+#if (defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_EUR_LTE) || defined(CONFIG_MACH_MS01_KOR_LTE) || defined(CONFIG_MACH_MS01_CHN_CMCC_3G) || defined(CONFIG_MACH_MS01_CHN_CU_3G))
 		flash_control(false);
 #endif
 	/* Desk Dock */

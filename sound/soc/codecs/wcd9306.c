@@ -5825,7 +5825,7 @@ static const struct tapan_reg_mask_val tapan_reg_defaults[] = {
 	/* Reduce LINE DAC bias to 70% */
 #if defined(CONFIG_SEC_MATISSE_PROJECT) || defined(CONFIG_SEC_T10_PROJECT)
 	TAPAN_REG_VAL(TAPAN_A_RX_LINE_BIAS_PA, 0x78),
-#elif defined(CONFIG_MACH_MS01_EUR_3G)
+#elif defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_EUR_LTE) || defined(CONFIG_MACH_MS01_KOR_LTE)
 	TAPAN_REG_VAL(TAPAN_A_RX_LINE_BIAS_PA, 0x7A),
 #else
 	TAPAN_REG_VAL(TAPAN_A_RX_LINE_BIAS_PA, 0x7B),
