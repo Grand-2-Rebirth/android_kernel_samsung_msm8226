@@ -559,7 +559,7 @@ static struct msm_gpiomux_config msm_csensor_configs[] __initdata = {
 		.gpio = 0, /* CIS_SPI_MOSI */
 		.settings = {
 			[GPIOMUX_ACTIVE]	= &cam_settings[5],
-#if defined(CONFIG_MACH_MS01_EUR_3G)
+#if defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_EUR_LTE) || defined(CONFIG_MACH_MS01_KOR_LTE)
 			[GPIOMUX_SUSPENDED] = &cam_settings[5],
 #else
 			[GPIOMUX_SUSPENDED] = &cam_settings[8],
@@ -570,7 +570,7 @@ static struct msm_gpiomux_config msm_csensor_configs[] __initdata = {
 		.gpio = 1, /* CIS_SPI_MISO */
 		.settings = {
 			[GPIOMUX_ACTIVE]	= &cam_settings[5],
-#if defined(CONFIG_MACH_MS01_EUR_3G)
+#if defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_EUR_LTE) || defined(CONFIG_MACH_MS01_KOR_LTE)
 			[GPIOMUX_SUSPENDED] = &cam_settings[5],
 #else
 			[GPIOMUX_SUSPENDED] = &cam_settings[8],
@@ -581,7 +581,7 @@ static struct msm_gpiomux_config msm_csensor_configs[] __initdata = {
 		.gpio = 3, /* CIS_SPI_SCLK */
 		.settings = {
 			[GPIOMUX_ACTIVE]	= &cam_settings[5],
-#if defined(CONFIG_MACH_MS01_EUR_3G)
+#if defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_EUR_LTE) || defined(CONFIG_MACH_MS01_KOR_LTE)
 			[GPIOMUX_SUSPENDED] = &cam_settings[5],
 #else
 			[GPIOMUX_SUSPENDED] = &cam_settings[8],
@@ -665,7 +665,7 @@ static struct msm_gpiomux_config msm_csensor_configs[] __initdata = {
 		},
 	},
 	{
-#if defined(CONFIG_MACH_MS01_EUR_3G)
+#if defined(CONFIG_MACH_MS01_EUR_3G) || defined(CONFIG_MACH_MS01_EUR_LTE) || defined(CONFIG_MACH_MS01_KOR_LTE)
 		.gpio = 33, /* AF_SCL */
 #else
 		.gpio = 36, /* AF_SCL */

@@ -1212,9 +1212,15 @@ config MACH_MS01_EUR_3G
 
 config MACH_MS01_EUR_LTE
         depends on SEC_MS01_PROJECT
-        bool "MSM8226 MS01 EUR 3G"
+        bool "MSM8926 MS01 EUR LTE"
         help
           Support for the Samsung MS01 EURO LTE device
+		  
+config MACH_MS01_KOR_LTE
+ 		depends on SEC_MS01_PROJECT
+         bool "MSM8926 MS01 KOR LTE"
+         help
+           Support for the Samsung MS01 KOR LTE device
 
 config MACH_VICTOR3GDSDTV_LTN
 	bool "VICTOR3GDSDTV LTN"
